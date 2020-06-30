@@ -1,0 +1,141 @@
+.container
+  .row.mb-3
+    = form_with url: "#", local: true, class: "col-md-6" do |f|
+      .form-group.row
+        = f.label :date, "作った日付" , class: "col-md-3 col-form-label-sm align-self-center mb-0"
+        = f.text_field :date, class: "form-control-sm col-md-5"
+      .form-group.row
+        = f.label :name, "レシピ名", class: "col-md-3 align-self-center mb-0"
+        = f.text_field :date, class: "form-control col-md-9"
+      .form-group.row
+        = f.label :image, style: "width: 300px; height: 350px; position: relative;", class: "mx-auto bg-light" do
+          %p.text-center{ style: "padding-top: 125px;"} 料理の写真を投稿
+          = icon "far", "image", class: "", style: "font-size: 50px; position: absolute; top: 150px; left: 125px;"
+          = f.file_field :image, class: "form-control d-none"
+    .col-md-6
+      .mb-2.justify-content-md-end.d-flex
+        %a.btn.btn-primary.mr-2.text-light{ href: "" } 過去のレシピを流用
+        %a.btn.btn-primary.text-light{ href: "" } 登録する！
+      %div
+        %form
+          %table.table.table-bordered.table-sm
+            %thead
+              %tr.table-info
+                %th{ scope: "col", style: "width: 70px;" } 材料
+                %th{ scope: "col" } 材料名
+                %th{ scope: "col" } 分量
+                %th{ scope: "col" } メモ
+            %tbody
+              %tr
+                %th{ scope: "row" } 材料1
+                %td
+                  .form-group.mb-0
+                    %input.form-control{ type: "text", name: "material1" }
+                %td
+                  .form-group.mb-0
+                    %input.form-control{ type: "text", name: "material1" }
+                %td
+                  .form-group.mb-0
+                    %input.form-control{ type: "text", name: "material1" }
+              %tr
+                %th{ scope: "row" } 材料2
+                %td
+                  .form-group.mb-0
+                    %input.form-control{ type: "text", name: "material1" }
+                %td
+                  .form-group.mb-0
+                    %input.form-control{ type: "text", name: "material1" }
+                %td
+                  .form-group.mb-0
+                    %input.form-control{ type: "text", name: "material1" }
+              %tr
+                %th{ scope: "row" } 材料3
+                %td
+                  .form-group.mb-0
+                    %input.form-control{ type: "text", name: "material1" }
+                %td
+                  .form-group.mb-0
+                    %input.form-control{ type: "text", name: "material1" }
+                %td
+                  .form-group.mb-0
+                    %input.form-control{ type: "text", name: "material1" }
+              %tr
+                %th{ scope: "row" } 材料4
+                %td
+                  .form-group.mb-0
+                    %input.form-control{ type: "text", name: "material1" }
+                %td
+                  .form-group.mb-0
+                    %input.form-control{ type: "text", name: "material1" }
+                %td
+                  .form-group.mb-0
+                    %input.form-control{ type: "text", name: "material1" }
+              %tr
+                %th{ scope: "row" } 材料5
+                %td
+                  .form-group.mb-0
+                    %input.form-control{ type: "text", name: "material1" }
+                %td
+                  .form-group.mb-0
+                    %input.form-control{ type: "text", name: "material1" }
+                %td
+                  .form-group.mb-0
+                    %input.form-control{ type: "text", name: "material1" }
+              %tr
+                %th{ scope: "row" } 材料6
+                %td
+                  .form-group.mb-0
+                    %input.form-control{ type: "text", name: "material1" }
+                %td
+                  .form-group.mb-0
+                    %input.form-control{ type: "text", name: "material1" }
+                %td
+                  .form-group.mb-0
+                    %input.form-control{ type: "text", name: "material1" }
+              %tr
+                %th{ scope: "row" } 材料7
+                %td
+                  .form-group.mb-0
+                    %input.form-control{ type: "text", name: "material1" }
+                %td
+                  .form-group.mb-0
+                    %input.form-control{ type: "text", name: "material1" }
+                %td
+                  .form-group.mb-0
+                    %input.form-control{ type: "text", name: "material1" }
+              %tr
+                %th{ scope: "row" } 材料8
+                %td
+                  .form-group.mb-0
+                    %input.form-control{ type: "text", name: "material1" }
+                %td
+                  .form-group.mb-0
+                    %input.form-control{ type: "text", name: "material1" }
+                %td
+                  .form-group.mb-0
+                    %input.form-control{ type: "text", name: "material1" }
+
+  .form
+    .form-group.w-100
+      %label 全体のメモ
+      %textarea.form-control{ row:"3", placeholder: "総括メモ" }
+  %p 手順
+  .form
+    .form-row
+      .form-group.col-md-6
+        %textarea.form-control{ row: "3", placeholder: "手順1" }
+      .form-group.col-md-6
+        %textarea.form-control{ row: "3", placeholder: "メモ1" }
+    .form-row
+      .form-group.col-md-6
+        %textarea.form-control{ row: "3", placeholder: "手順2" }
+      .form-group.col-md-6
+        %textarea.form-control{ row: "3", placeholder: "メモ2" }
+    .form-row
+      .form-group.col-md-6
+        %textarea.form-control{ row: "3", placeholder: "手順3" }
+      .form-group.col-md-6
+        %textarea.form-control{ row: "3", placeholder: "メモ3" }
+
+
+
