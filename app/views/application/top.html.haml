@@ -1,0 +1,31 @@
+.container.pt-3
+  =link_to "新規レシピ登録", "#", class: "btn btn-primary btn-block w-50 mx-auto", role: "button"
+  =form_with url: "#", local: true, class: "w-50 mx-auto" do |f|
+    .form-group.pt-3
+      =f.label :search, "レシピ検索"
+      =f.text_field :search, placeholder: "レシピ名を入力", class: "form-control"
+
+-# 検索結果表示用領域
+.container
+  .row
+    .col-md-4.pt-3
+      %a.card.bg-light.text-dark{ href: "#" }
+        %img.card-img-top.img-fluid{ src: "/assets/morning.jpg", alt: "レシピ画像" }
+        %h5.card-footer レシピ名
+    .col-md-4.pt-3
+      %a.card.bg-light.text-dark{ href: "#" }
+        %img.card-img-top.img-fluid{ src: "/assets/morning.jpg", alt: "レシピ画像" }
+        %h5.card-footer レシピ名
+    .col-md-4.pt-3
+      %a.card.bg-light.text-dark{ href: "#" }
+        %img.card-img-top.img-fluid{ src: "/assets/morning.jpg", alt: "レシピ画像" }
+        %h5.card-footer レシピ名
+    .col-md-4.pt-3
+      %a.card.bg-light.text-dark{ href: "#" }
+        %img.card-img-top.img-fluid{ src: "/assets/morning.jpg", alt: "レシピ画像" }
+        %h5.card-footer レシピ名
+    .col-md-4.pt-3
+      %a.card.bg-light.text-dark{ href: "#" }
+        %img.card-img-top.img-fluid{ src: "/assets/morning.jpg", alt: "レシピ画像" }
+        %h5.card-footer レシピ名
+        
