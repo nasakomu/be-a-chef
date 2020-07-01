@@ -1,0 +1,10 @@
+.container
+  %h3.text-center ユーザー編集
+  = form_with model: @user, local: true, class: "bg-light w-50 mx-auto p-3" do |f|
+    .form-group
+      =f.label :name, "ユーザー名"
+      =f.text_field :name, class: "form-control"
+    .form-group
+      =f.label :email, "メールアドレス"
+      =f.email_field :email, class: "form-control"
+    =f.submit "更新する", class:"btn btn-primary" 
