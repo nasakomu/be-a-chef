@@ -1,8 +1,16 @@
 .container-fluid.bg-light.mb-3
   %nav.navbar.navbar-expand.navbar-light.justify-content-between
-    %a.navbar-brand{ href: "#"}be-a-chef
+    =link_to "be-a-chef", root_path, class: "navbar-brand"
     %ul.navbar-nav
-      %li.nav-item
-        =link_to "ユーザー名", "#", class: "nav-link"
-      %li.nav-item
-        =link_to "レシピ一覧", "#", class: "nav-link"
+      -if user_signed_in?
+        %li.nav-item.dropdown
+          =link_to current_user.name, "#", class: "nav-link dropdown-toggle", data: { toggle: "dropdown" }
+          .dropdown-menu
+            =link_to "登録情報", edit_user_path(current_user), class: "dropdown-item"
+            =link_to "ログアウト", destroy_user_session_path, class: "dropdown-item", method: :delete
+        %li.nav-item
+          =link_to "レシピ一覧", "#", class: "nav-link"
+      -else
+        %li.nav-item
+          =link_to "ログイン", new_user_session_path, class: "nav-link"
+  
