@@ -1,0 +1,17 @@
+.container
+  %h3.text-center ログイン
+  = form_with model: @user, url: user_session_path, id: 'new_user', local: true, class: "bg-light w-50 mx-auto p-3 new_user" do |f|
+    = devise_error_messages!
+    .form-group
+      =f.label :email, "メールアドレス"
+      =f.email_field :email, class: "form-control"
+    .form-group
+      =f.label :password, "パスワード"
+      =f.password_field :password, class: "form-control"
+    -if devise_mapping.rememberable?
+      .form-check.mb-3
+        =f.check_box :remember_me, class: "form-check-input", id: "remember_me"
+        =f.label :remember_me, "次回から自動でログインする", class: "form-check-label", for: "remember_me"
+    .justify-content-between.d-flex
+      =f.submit "ログインする", class:"btn btn-primary" 
+      =link_to "新規登録", new_user_registration_path, class: "btn btn-primary"

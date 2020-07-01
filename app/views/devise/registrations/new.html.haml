@@ -1,0 +1,14 @@
+.container
+  %h3.text-center ユーザー登録
+  = form_with model: @user, url: "/users", local: true, class: "bg-light w-50 mx-auto p-3" do |f|
+    = devise_error_messages!
+    .form-group
+      =f.label :name, "ユーザー名"
+      =f.text_field :name, class: "form-control"
+    .form-group
+      =f.label :email, "メールアドレス"
+      =f.email_field :email, class: "form-control"
+    .form-group
+      =f.label :password, "パスワード"
+      =f.password_field :password, class: "form-control"
+    =f.submit "登録する", class:"btn btn-primary" 
